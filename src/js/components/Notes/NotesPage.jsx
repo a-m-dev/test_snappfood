@@ -106,7 +106,7 @@ class Notes extends React.Component {
         <Spring
           native 
           to={{
-            bottom: notes.length >= 1 ? 110 : -200,
+            bottom: (notes.length >= 1) && shouldShowAddNoteForm ? 110 : -200,
             opacity: 1
           }}
           config={config.default}

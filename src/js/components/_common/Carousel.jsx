@@ -57,12 +57,14 @@ class Carousel extends React.Component {
 
   // mouse Leave
   handleMouseLeave = (e) => {
-    this.handleSnap()
+    const { _data } = this.props
+    this.handleSnap();
   }
 
 
   // mouse Up
   handleMouseUp = (e) => {
+    const { _data } = this.props
     this.handleSnap();
   }
 
