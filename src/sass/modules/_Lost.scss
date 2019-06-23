@@ -1,0 +1,14 @@
+
+
+.lost {
+  width: 450px;
+  height: 225px;
+  margin: 0 auto;
+  @include makeCenter(center, center, column);
+
+  a {
+    margin-top: 1rem;
+    background: springgreen;
+    padding: 1rem 2rem;
+  }
+}

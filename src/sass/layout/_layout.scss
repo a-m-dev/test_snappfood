@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box !important;
+}
+
+body {
+  // background-color: lighten($pale-grey, 30%);
+  color: $main-text-color;
+  font-family: 'IRANsans';
+}
+
+.bg {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-image: 
+    linear-gradient(
+      to right top, 
+      #d16ba5, 
+      #c777b9, 
+      #ba83ca, 
+      #aa8fd8, 
+      #9a9ae1, 
+      #8aa7ec, 
+      #79b3f4, 
+      #69bff8, 
+      #52cffe, 
+      #41dfff, 
+      #46eefa, 
+      #5ffbf1
+    );
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 768px;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.btn {
+  background-color: rgba($white, 0.25);
+  outline: 0px;
+  border: 0px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: rgba($white, 0.6);
+  cursor: pointer;
+  box-shadow: 0 10px 15px rgba($white, 0.1);
+  
+  &:hover {
+    color: rgba($white, 1);
+    background-color: rgba($white, 0.35);
+    box-shadow: 0 10px 50px rgba($white, 0.15);
+  }
+}
+
+.btn--dark {
+  outline: 0px;
+  border: 0px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+  background-color: rgba($black, 0.25);
+  color: rgba($white, 0.6);
+  box-shadow: 0 10px 15px rgba($black, 0.1);
+  padding: 0.25rem 0.5rem;
+  font-size: 11px;
+  margin-right: 0.25rem;
+  cursor: pointer;
+
+  &:hover {
+    color: rgba($black, 1);
+    background-color: rgba($black, 0.35);
+    box-shadow: 0 10px 50px rgba($black, 0.15);
+  }
+}

@@ -1,0 +1,65 @@
+
+
+// some usefull mixins that you may OR may not need 
+
+
+// Linear gradinetngradient
+@mixin linearGradient($from, $to, $stop: 100%) {
+  /* fallback/image non-cover color */
+  background-color: $from;
+  background-image: -moz-linear-gradient(left, $from 0%, $to $stop); /* Firefox 3.6+ */
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, $from), color-stop($stop, $to)); /* Safari 4+, Chrome 1+ */
+  background-image: -webkit-linear-gradient(left, $from 0%, $to $stop); /* Safari 5.1+, Chrome 10+ */
+  background-image: -o-linear-gradient(left, $from 0%, $to $stop);/* Opera 11.10+ */
+  background: -ms-linear-gradient(left, $from 0%, $to $stop); /* IE10+ */
+  background: linear-gradient(to right, $from 0%, $to $stop);/* Standard */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 ); /* IE6-9 */
+}
+
+
+// Fit windows 
+@mixin fitWindow {
+  width: 100%;
+  height: 100vh;
+}
+
+
+
+// Make Center
+@mixin makeCenter($align, $justify, $direction) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+}
+
+
+// unselectable 
+@mixin unselectable {
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+
+
+
+// befoee after for gradient purposes mostly
+@mixin beforeAfter() {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0; right: 0; bottom: 0;
+}
+
+
+
+// placeholder 
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}

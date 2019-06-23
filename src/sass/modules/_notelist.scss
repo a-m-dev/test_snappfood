@@ -1,0 +1,73 @@
+.notelist {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  display: block;
+
+  &__logo {
+    position: absolute;
+    // width: 100%;
+    // top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include makeCenter(center, center, column);
+
+    img { height: 100% }
+  }
+
+  &__heading {
+    position: absolute;
+    margin: 0px;
+    width: 100%;
+    // top: calc(40% + 80px);
+    color: lighten($base-blue, 10%);
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: $base-font-size;
+    font-weight: normal;
+    @include makeCenter(center, center, column);
+  }
+
+  &__addNoteBtn {
+    position: absolute;
+    height: 48px;
+    right: 0px;
+    @include makeCenter(center, center, column);
+
+    button { margin: 0px; }
+  }
+
+  &__submitForm {
+    width: 100%;
+    position: absolute;
+    // top: 50%;
+    direction: rtl;
+    transform: translateY(-50%);
+
+    &__head {
+      position: absolute;
+      left: 0px;
+      color: lighten($base-blue, 16%);
+      font-size: 1.15rem;
+      padding-left: 0.75rem;
+      margin: 0px;
+      font-weight: normal;
+      text-align: left;
+      direction: ltr;
+      top: -35px;
+    }
+
+    input[type="submit"] {
+      right: 0px;
+    }
+  }
+
+
+  &__carousel {
+    position: absolute;
+    width: 100%;
+    bottom: 115px;
+    min-height: 100px;
+  }
+}

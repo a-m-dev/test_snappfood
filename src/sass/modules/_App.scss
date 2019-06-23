@@ -1,0 +1,52 @@
+
+
+.heading {
+  color: $main-text-color;
+  text-align: center;
+}
+
+
+.blocks {
+  margin: 2rem 0;
+  padding: 0 5rem;
+  margin-top: 5rem;
+
+  h3, p { margin-bottom: 0px; }
+  
+  ._des {
+    font-size: 12px;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.persian-text {
+  font-family: $base-persian-font;
+  direction: rtl;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.list-items {
+  margin: 0px;
+  padding: 0px;
+  height: fit-content;
+  list-style-type: none;
+  margin-top: 1rem;
+  @include makeCenter(flex-start, space-between, row);
+
+  > li {
+    padding: 1rem ;
+    background-color: #ddd;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: darken(#ddd, 5%);
+    }
+
+    img {
+      border-radius: 5px;
+    }
+  }
+}
